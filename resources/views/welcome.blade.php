@@ -32,6 +32,6 @@
         @else
             <p>O nome e indefinido </p>
         @endif
-            <p>Dados: Nome: {{$nome}} e sua idade é {{$idade}}</p>
+            <p>Dados: Nome: {{$nome}} e sua idade é {{$idade}} e sua profissão é {{$profissao}}</p>
     </body>
 </html>
