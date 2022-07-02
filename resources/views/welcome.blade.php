@@ -33,5 +33,17 @@
             <p>O nome e indefinido </p>
         @endif
             <p>Dados: Nome: {{$nome}} e sua idade é {{$idade}} e sua profissão é {{$profissao}}</p>
+
+        @for ($i = 0; $i < count($array); $i++)  
+            <p>{{$array[$i]}}</p>
+        @endfor
+        {{-- O blade não renderiza comentarios no inspecionar elemento por exemplo --}}
+        
+        @foreach($namesArray as $nomes)
+        {{-- O loop e uma variavel do proprio blade --}}
+            <p>{{$loop -> index}}</p>
+            <p>{{$nomes}}</p>
+        @endforeach
+
     </body>
 </html>
