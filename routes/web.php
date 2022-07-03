@@ -18,7 +18,7 @@ Route::get('/', function () {
     $idade = 21;
     $array = [10,20,30,40,50];
     $namesArray = ["Vitor","Clara","Varley"];
-    return view('welcome',[
+    return view('homepage',[
         'nome' => $nome,
          'idade' => $idade, 
          'profissao' => 'Programador',

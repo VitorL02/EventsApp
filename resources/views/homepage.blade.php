@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/style.css">
-        <script src="/js/script.js"></script>
-        <title>EventsApp</title>
+@extends('layouts.main')
+@section('title','EventsApp - Home Page')
 
-    </head>
-    <body>
+@section('content')
         <h1>Titulo Teste</h1>
         <img src="/img/banner.jpg" alt="">
         @if(10 > 5)
@@ -33,6 +26,4 @@
             <p>{{$loop -> index}}</p>
             <p>{{$nomes}}</p>
         @endforeach
-
-    </body>
-</html>
+@endsection
