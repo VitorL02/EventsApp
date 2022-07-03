@@ -26,6 +26,12 @@ Route::get('/', function () {
          'namesArray' => $namesArray
         ]); // retorna a variavel nome pra ser acessada em views;
 });
+
 Route::get('/contact', function () {
-    return view('contact');
+    $search = request('search');
+    return view('contact', ['search'=>$search]);
+});
+
+Route::get('/contact_teste/{id?}', function ($id = null) {
+    return view('contact', ['id'=>$id]);
 });

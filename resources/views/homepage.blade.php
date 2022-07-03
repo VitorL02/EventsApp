@@ -1,7 +1,9 @@
 @extends('layouts.main')
+
 @section('title','EventsApp - Home Page')
 
 @section('content')
+
         <h1>Titulo Teste</h1>
         <img src="/img/banner.jpg" alt="">
         @if(10 > 5)

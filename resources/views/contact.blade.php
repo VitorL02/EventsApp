@@ -1,2 +1,12 @@
-<h1>Essa e A view de Contato</h1>
-<a href="/">Voltar para Home Page</a>
+@extends('layouts.main')
+
+@section('title','Contato')
+
+@section('content')
+
+
+    @if($search != '')
+        <p>O usuario busca o seguinte contato {{$search}}</p>
+    @endif
+
+@endsection
