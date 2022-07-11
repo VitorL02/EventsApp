@@ -51,7 +51,7 @@ header {
 #navbar {
     justify-content: space-between;
     background-color: #ffff;
-    padding: 5px 0;
+    padding: 10px;
 }
 
 #navbar a {
