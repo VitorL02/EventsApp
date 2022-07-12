@@ -6,11 +6,10 @@ footer {
     text-align: center;
     background-color: #353E48;
     padding: 30px;
-    bottom: 0;
+    bottom: 0px;
     position: absolute;
     color: #FFFF;
     width: 100%;
-
 }
 
 body {
@@ -118,7 +117,8 @@ header {
 
 .card .card-date {
     font-size: 12px;
-    color: #CCC;
+    color: #212121;
+
 }
 
 .card .card-title {
@@ -126,4 +126,21 @@ header {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+#event-create-container {
+    padding: 30px;
+    margin-bottom: 60px;
+
+}
+
+#event-create-container label {
+    font-weight: bold;
+}
+
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+    font-size: 20px;
+    margin: 5px;
 }
