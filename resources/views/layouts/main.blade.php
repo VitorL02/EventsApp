@@ -37,8 +37,14 @@
                 </div>
             </nav>
         </header>
-
-        @yield('content')
+        <main>
+            <div class="container-fluid">
+                @if(session('msg'))
+                <p class="msg">{{session('msg')}}</p>
+                @endif
+                @yield('content')
+            </div>
+        </main>
     <footer>
         <p>EventsApp - Curso Laravel Hora de Codar  &copy; 2022</p>
     </footer>
