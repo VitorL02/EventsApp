@@ -32,6 +32,21 @@
             <label for="Title">Descrição : </label>
             <textarea name="description" id="description" placeholder="Descreva o Evento" class="form-control"></textarea>
         </div>
+        <div class="form-group">
+            <label for="Title">Adicione itens de infra: </label>
+           <div class="form-group">
+            <input type="checkbox" id="items" name="items[]" value="Open Bar">Open Bar
+           </div>
+           <div class="form-group">
+            <input type="checkbox" id="items" name="items[]" value="Palco">Palco
+           </div>
+           <div class="form-group">
+            <input type="checkbox" id="items" name="items[]" value="Open Food">Open Food
+           </div>
+           <div class="form-group">
+            <input type="checkbox" id="items" name="items[]" value="Brindes">Brindes
+           </div>
+        </div>
         <input type="submit" class="btn btn-primary" value="Criar Evento">
     </form>
 </div>
