@@ -8,14 +8,23 @@ use App\Models\Event;
 class EventController extends Controller
 {
     public function index(){
-        $events = Event::all(); // comando orm que retorna todos os eventos;
+        $search = request('search');
 
-        return view('homepage',['events' => $events]); // retorna a variavel nome pra ser acessada em views;
+        if($search){
+            $events = Event::where([
+                ['title','like','%'.$search.'%']
+            ])->get();
+        }else{
+            $events = Event::all(); // comando orm que retorna todos os eventos;
+        }
+
+        return view('homepage',['events' => $events,'search'=>$search]); // retorna a variavel nome pra ser acessada em views;
     }
 
     public function createEvents(){
         return view('events.create');
     }
+
     public function store(Request $request){
         $event = new Event;
         //Acessa os dados do objeto instaciado na view e salva no banco com o metodo save
