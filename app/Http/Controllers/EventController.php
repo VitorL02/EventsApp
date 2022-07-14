@@ -20,6 +20,7 @@ class EventController extends Controller
         $event = new Event;
         //Acessa os dados do objeto instaciado na view e salva no banco com o metodo save
         $event->title=$request->title;
+        $event->date=$request->date;
         $event->city=$request->city;
         $event->private=$request->private;
         $event->description=$request->description;
