@@ -14,6 +14,7 @@
                 <p class="event-city"><ion-icon name="location-outline"></ion-icon> {{$event->city}}</p>
                 <p class="events-participants"><ion-icon name="people-outline"></ion-icon> X-participantes</p>
                 <p class="event-owner"><ion-icon name="star-outline"></ion-icon> Dono do Evento</p>
+                <p><ion-icon name="calendar-clear-outline"></ion-icon> Data do Evento: {{date('d/y/m H:i',strtotime($event->date))}}</p>
                 <div class="col-md-5" id="description-container">
                     <h3>Sobre o Evento: </h3>
                     <p class="event-description">{{$event->description}}</p>
