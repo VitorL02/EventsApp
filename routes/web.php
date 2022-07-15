@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,26 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventController;
 
 Route::get('/',[EventController::class,'index']);
-Route::get('/create-event',[EventController::class,'createEvents']);
+// Route::get('/create-event',[EventController::class,'createEvents']);
 Route::get('/event/{id}',[EventController::class,'show']);
 Route::post('/events',[EventController::class,'store']);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
+});
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/create-event',[EventController::class,'createEvents'], function () {
+        return Inertia::render('create');
+    })->name('create');
+});
